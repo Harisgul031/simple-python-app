@@ -1,7 +1,7 @@
 # test.py - Test cases for app.py
 
 import unittest
-from app import add, subtract, multiply
+from app import add, subtract, multiply, square
 
 class TestCalculator(unittest.TestCase):
     def test_add(self):
@@ -12,6 +12,12 @@ class TestCalculator(unittest.TestCase):
 
     def test_multiply(self):
         self.assertEqual(multiply(4, 3), 12)
+
+    def test_square(self):
+        self.assertEqual(square(2), 4)
+        self.assertEqual(square(-3), 9)
+        self.assertEqual(square(0), 0)
+        self.assertEqual(square(5), 25)
 
 if __name__ == "__main__":
     unittest.main()
