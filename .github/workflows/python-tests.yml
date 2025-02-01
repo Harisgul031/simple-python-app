@@ -15,7 +15,6 @@ jobs:
         python-version: 3.8
 
     - name: Install Dependencies
-      run: pip install unittest
 
     - name: Run Tests
       run: python -m unittest test.py
