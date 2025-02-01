@@ -7,14 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v3  # ✅ Correct "uses" for GitHub actions
 
     - name: Set Up Python
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v3  # ✅ Correct "uses" to set up Python
       with:
         python-version: 3.8
 
-    - name: Install Dependencies
-
     - name: Run Tests
-      run: python -m unittest test.py
+      run: python -m unittest discover  # ✅ Correct "run" command to execute tests
